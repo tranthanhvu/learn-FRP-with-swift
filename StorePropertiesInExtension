@@ -1,0 +1,26 @@
+// by default, apple don't allow stored properties in extension. But you still can do it with associatedObject
+// reference to http://stackoverflow.com/a/32061229/1654338
+// For example
+
+extension MyView {
+    private struct AssociatedKeys {
+        static var displayed = "displayed"
+    }
+    
+    //this lets us check to see if the item is supposed to be displayed or not
+    var displayed : Bool {
+        get {
+            guard let number = objc_getAssociatedObject(self, &AssociatedKeys.displayed) as? NSNumber else {
+                return true
+            }
+            return number.boolValue
+        }
+
+        set(value) {
+            objc_setAssociatedObject(self,&AssociatedKeys.displayed,NSNumber(bool: value),objc_AssociationPolicy.OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+}
+
+
+
