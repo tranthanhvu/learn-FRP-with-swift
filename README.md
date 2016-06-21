@@ -5,7 +5,7 @@ Some resource helping me to approach the new world, FRP world
 http://artsy.github.io/blog/2015/12/08/reactive-cocoa-to-rxswift/
 
 ## Rxswift + MVVM
-https://medium.com/cobe-mobile/implementing-mvvm-in-ios-with-rxswift-458a2d47c33d#.qwf0ndugg
+https://medium.com/cobe-mobile/implementing-mvvm-in-ios-with-rxswift-updated-for-swift-2-51cc3ef7edb3#.kual89x9q
 
 http://candycode.io/a-practical-mvvm-example-in-swift-part-1/
 
